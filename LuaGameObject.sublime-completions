@@ -1,0 +1,17 @@
+{
+    "scope": "source.lua -variable.other.lua",
+
+    "completions":
+    [
+        { "trigger": "LuaGameObject:Awake", "contents": "this.Awake()" },
+        { "trigger": "LuaGameObject:Start", "contents": "this.Start()" },
+        { "trigger": "LuaGameObject:OnEnable", "contents": "this.OnEnable()" },
+        { "trigger": "LuaGameObject:OnDisable", "contents": "this.OnDisable()" },
+        { "trigger": "LuaGameObject:OnDestroy", "contents": "this.OnDestroy()" },
+        { "trigger": "LuaGameObject:Update", "contents": "this.Update()" },
+        { "trigger": "LuaGameObject.gameObject", "contents": "this.gameObject" },
+        { "trigger": "LuaGameObject.transform", "contents": "this.transform" },
+
+        { "trigger": "LuaGameObject:AddMember", "contents": "this.AddMember(${1:1_varType},${2:2_name})" },
+    ]
+}

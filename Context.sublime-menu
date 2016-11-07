@@ -1,0 +1,12 @@
+[
+    { 
+    	"caption": "LuaTool", 
+        "children":
+        [
+            {
+            	"caption": "创建LuaGameObject",
+            	"command": "create_go", 
+            }
+        ]
+    }
+]
