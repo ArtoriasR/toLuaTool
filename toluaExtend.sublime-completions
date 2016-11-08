@@ -1,0 +1,8 @@
+{
+    "scope": "source.lua -variable.other.lua",
+
+    "completions":
+    [
+        { "trigger": "Object.singletonMake", "contents": "Object.singletonMake(${1:Class})" },
+    ]
+}
