@@ -1,0 +1,10 @@
+{
+    "scope": "source.lua -variable.other.lua",
+
+    "completions":
+    [
+        { "trigger": "table.insert\ttable.insert", "contents": "table.insert(${1:table},${2:value})" },
+        { "trigger": "table.remove\ttable.remove", "contents": "table.remove(${1:table},${2:index})" },
+        { "trigger": "table.concat\ttable.concat", "contents": "table.concat(${1:table},${2:seq})" },
+    ]
+}
