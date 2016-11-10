@@ -2,5 +2,13 @@
 	{
 		"caption": "create go",
 		"command": "create_go"
-	}
+	},
+	{
+		"caption": "create object",
+		"command": "create_object"
+	},
+    {
+        "caption": "create listItemRenderer",
+        "command": "create_list_item_renderer", 
+    },
 ]

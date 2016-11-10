@@ -16,12 +16,11 @@ MAX_WORDS_PER_VIEW = 100
 MAX_FIX_TIME_SECS_PER_VIEW = 0.01
 
 
-class AllAutocomplete(sublime_plugin.EventListener):
+class toluaAutocomplete(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
         words = []
         view_words =  view.extract_completions(prefix.upper(), locations[0]) + view.extract_completions(prefix.lower(), locations[0])
-        view_words = filter_words(view_words)
         view_words = fix_truncation(view, view_words)
         words += [(w, view) for w in view_words]
 
@@ -34,12 +33,6 @@ class AllAutocomplete(sublime_plugin.EventListener):
                 trigger += '\t(%s)' % basename(v.file_name())
             matches.append((trigger, contents))
         return matches
-
-
-def filter_words(words):
-    words = words[0:MAX_WORDS_PER_VIEW]
-    return [w for w in words if MIN_WORD_SIZE <= len(w) <= MAX_WORD_SIZE]
-
 
 # keeps first instance of every word and retains the original order
 # (n^2 but should not be a problem as len(words) <= MAX_VIEWS*MAX_WORDS_PER_VIEW)
