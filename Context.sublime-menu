@@ -6,7 +6,15 @@
             {
             	"caption": "创建LuaGameObject",
             	"command": "create_go", 
-            }
+            },
+            {
+                "caption": "创建Object",
+                "command": "create_object", 
+            },
+            {
+                "caption": "创建ListItemRenderer",
+                "command": "create_list_item_renderer", 
+            },
         ]
     }
 ]

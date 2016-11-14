@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+function this:req${1:ReqClass}()
+	if(not this.isTest)then
+		local req = ${1:ReqClass}()
+		trace("SendReq "..tostring(${1:ReqClass})..":"..tostring(req))
+		local bytes = req:SerializeToString()
+		NetManager.Send(bytes, ${1:ReqClass}.pid, this.rsp${2:RspClass}, ${2:RspClass})
+	else
+		this.rsp${2:RspClass}()
+	end
+end
+
+function this.rsp${2:RspClass}(pkgData)
+	if(not this.isTest)then
+		local rsp = ${2:RspClass}()
+		rsp:ParseFromString(pkgData)
+
+		trace("onReceiveRsp "..tostring(${2:RspClass})..":"..tostring(rsp))
+	else
+		trace("onReceiveRsp")
+	end
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>req</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.lua</scope>
+</snippet>
