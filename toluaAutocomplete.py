@@ -10,7 +10,7 @@ from os.path import basename
 MAX_FIX_TIME_SECS_PER_VIEW = 0.01
 
 
-class AllAutocomplete(sublime_plugin.EventListener):
+class toluaAutocomplete(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
         words = []
