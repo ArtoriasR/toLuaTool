@@ -15,6 +15,14 @@
                 "caption": "创建ListItemRenderer",
                 "command": "create_list_item_renderer", 
             },
+            {
+                "caption": "创建LuaPanel",
+                "command": "create_lua_panel_base", 
+            },
+            {
+                "caption": "创建LuaModule",
+                "command": "create_lua_module_base", 
+            },
         ]
     }
 ]

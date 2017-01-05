@@ -11,4 +11,12 @@
         "caption": "create listItemRenderer",
         "command": "create_list_item_renderer", 
     },
+    {
+        "caption": "create luaPanelBase",
+        "command": "create_lua_panel_base", 
+    },
+    {
+        "caption": "create luaModuleBase",
+        "command": "create_lua_module_base", 
+    },
 ]
